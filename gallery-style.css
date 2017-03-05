@@ -1,0 +1,58 @@
+body {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+
+/* хедер */
+.header {
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+
+/* основной контейнер */
+.main {
+  margin-bottom: 50px;
+}
+
+.img-container {
+  display: inline-block;
+  opacity: 0.1;
+}
+
+.img-container:hover {
+  opacity: 1;
+  /*опасити делает элемент прозрачным*/
+}
+.img-container:first-of-type {
+  opacity: 1;
+}
+
+/*футер*/
+.footer {
+
+}
+
+ul li {
+  display: inline;
+  margin-right: 9px;
+}
+ul li:last-of-type {
+  margin-right: 0;
+}
+
+.margin-right {
+  margin-right: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  background: red;
+  color: white;
+}
+/*TODO: доделать футер*/
