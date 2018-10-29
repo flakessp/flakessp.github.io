@@ -1,0 +1,47 @@
+a {
+    color: #123bdd;
+    color: white;
+    color: black;
+    color: rgb(255,255,255);
+    color: rgba(0,0,0,0.1);
+    font-size: 50px;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+div {
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    background: blue;
+    border: 1px solid black;
+}
+
+.text_red {
+    color: red;
+}
+
+.heading {
+    font-size: 30px;
+    letter-spacing: 5px;
+    background: #eee;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.heading:hover {
+    background: green;
+}
+
+p:hover {
+    background: red;
+}
+
+
+
+
+
+
+
