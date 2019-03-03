@@ -1,5 +1,5 @@
 export default class Ball {
-  constructor(x, y) {
+  constructor(x, y, power) {
     this.x = x || 0;
     this.y = y || 0;
 
@@ -10,7 +10,7 @@ export default class Ball {
 
     this.friction = 0.7;
     this.springFactor = 0.3;
-    this.power = 0.1;
+    this.power = power || 0.1;
 
     this.maxspeed = 2;
 
@@ -26,6 +26,7 @@ export default class Ball {
     let dy = this.y - mouse.y;
 
     let dist = Math.sqrt(dx*dx + dy*dy);
+
     // interaction
     if(dist<100) {
       let angle = Math.atan2(dy,dx);
@@ -47,7 +48,6 @@ export default class Ball {
     this.vx += dx1 * this.springFactor;
     this.vy += dy1 * this.springFactor;
 
-        
     // friction
     this.vx *= this.friction;
     this.vy *= this.friction;
