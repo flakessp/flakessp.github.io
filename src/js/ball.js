@@ -9,8 +9,11 @@ export default class Ball {
     this.vy = 0;
 
     this.friction = 0.7;
-    this.springFactor = 0.1;
-    
+    this.springFactor = 0.3;
+    this.power = 0.1;
+
+    this.maxspeed = 2;
+
     this.diffX = 0;
     this.diffY = 0;
   }
@@ -29,8 +32,12 @@ export default class Ball {
       let tx = mouse.x + Math.cos(angle) * 100;
       let ty = mouse.y + Math.sin(angle) * 100;
 
-      this.vx += tx - this.x;
-      this.vy += ty - this.y;
+      this.vx += -tx + this.x;
+      this.vy += -ty + this.y;
+
+      // power
+      this.vx *= this.power;
+      this.vy *= this.power;
     }
 
     // spring back
@@ -44,6 +51,9 @@ export default class Ball {
     // friction
     this.vx *= this.friction;
     this.vy *= this.friction;
+
+    this.vx = Math.min(this.vx, this.maxspeed);
+    this.vy = Math.min(this.vy, this.maxspeed);
 
     // actual move
     this.x += this.vx;

@@ -32,7 +32,7 @@ function init() {
   elsArray.forEach(l => {
     let coords = l.getBoundingClientRect();
     let temp = new PIXI.Container();
-    let letter = new PIXI.Text(l.innerText,{fontFamily : 'Francois One', fontSize: 108, fill : 0xf9ed00, align : 'center'});
+    let letter = new PIXI.Text(l.innerText,{fontFamily : 'Francois One', fontSize: 108, fill : 0x000000, align : 'center'});
     letter.position.x = coords.x;
     letter.position.y = coords.y;
     // container.addChild(letter);
@@ -50,7 +50,6 @@ function init() {
 
   app.ticker.add( () => {
     let mouseposition = app.renderer.plugins.interaction.mouse.global;
-    
 
     balls.forEach((ball, j) => {
       ball.think(mouseposition);
